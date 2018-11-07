@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "TechJobsFinder",
+    "version": "3",
+    "intents": [
+      {
+        "name": "FindJob",
+        "version": "9",
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "xxxxx",
+            "messageVersion": "1.0"
+          }
+        },
+        "sampleUtterances": [
+          "find a job",
+          "search for job",
+          "find job",
+          "want a job"
+        ],
+        "slots": [
+          {
+            "name": "Location",
+            "slotConstraint": "Required",
+            "slotType": "AMAZON.US_CITY",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What city?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 2,
+            "sampleUtterances": []
+          },
+          {
+            "name": "PefectJob",
+            "slotConstraint": "Required",
+            "slotType": "PerfectJob",
+            "slotTypeVersion": "3",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Describe to me your perfect job?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 5,
+            "sampleUtterances": []
+          },
+          {
+            "name": "Profession",
+            "slotConstraint": "Required",
+            "slotType": "AMAZON.ProfessionalType",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What is your IT profession?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 3,
+            "sampleUtterances": []
+          },
+          {
+            "name": "Skills",
+            "slotConstraint": "Required",
+            "slotType": "SkillType",
+            "slotTypeVersion": "2",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What are your top skills, example: sql, .net, c#, dynamodb"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 4,
+            "sampleUtterances": []
+          }
+        ]
+      }
+    ],
+    "slotTypes": [
+      {
+        "name": "PerfectJob",
+        "version": "3",
+        "enumerationValues": [
+          {
+            "value": "the practical and technical skills",
+            "synonyms": []
+          },
+          {
+            "value": "the latest advancements",
+            "synonyms": []
+          },
+          {
+            "value": "a well rounded skill set",
+            "synonyms": []
+          },
+          {
+            "value": "various desktop operations",
+            "synonyms": []
+          },
+          {
+            "value": "my last job",
+            "synonyms": []
+          },
+          {
+            "value": "various roles",
+            "synonyms": []
+          },
+          {
+            "value": "a brief overview",
+            "synonyms": []
+          },
+          {
+            "value": "highly complex technical information",
+            "synonyms": []
+          },
+          {
+            "value": "multi-task oriented",
+            "synonyms": []
+          },
+          {
+            "value": "a challenge",
+            "synonyms": []
+          },
+          {
+            "value": "first rate organization",
+            "synonyms": []
+          },
+          {
+            "value": "great interest",
+            "synonyms": []
+          },
+          {
+            "value": "the top enterprise customers",
+            "synonyms": []
+          },
+          {
+            "value": "valuable experience",
+            "synonyms": []
+          },
+          {
+            "value": "complex technical issues",
+            "synonyms": []
+          },
+          {
+            "value": "Business Model Innovation",
+            "synonyms": []
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      },
+      {
+        "name": "SkillType",
+        "version": "2",
+        "enumerationValues": [
+          {
+            "value": "Development, GIT, Informatica, Java, Management, Scrum, Software Engineer, SQL, SQL Server, Subversion, Testing, Validation, XML"
+          },
+          {
+            "value": "HTTP, J2EE, Jenkins, Management, Micro, Modeling, NoSQL, Security, Software Engineer, Solr, Telecom, Telecommunications, Testing, Video"
+          },
+          {
+            "value": "Developer, Development, Feasibility Studies, Hardware, Management"
+          },
+          {
+            "value": "Analysis, Analyst, Business Requirements, Data Analysis, Database, Data Modeling"
+          },
+          {
+            "value": "Automated, C#, Database, Data Warehouse, Developer"
+          },
+          {
+            "value": "Firmware, GIT, GPS, Hardware, Lifecycle, Management, Modeling, Protocols, Software Engineer, TCP/IP"
+          },
+          {
+            "value": " Algorithms, Architecture, Embedded, Embedded Software, Exchange"
+          },
+          {
+            "value": "Modeling, Programming, Project, Project Management, Research, Security, SQL, SQL Server, VBScript"
+          },
+          {
+            "value": "Agile, Analysis, Analyst, API, Architecture, Automated, Broadband, Consulting, Developer, Development, Genetic, GIT"
+          },
+          {
+            "value": "Bash, CAD, Database, Development, Hadoop, Hardware, Lifecycle, Linux, Modeling, PostgreSQL, Project, Python, Software Engineer, Windows"
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      }
+    ],
+    "voiceId": "Joanna",
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 120,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, can you please repeat that?"
+        }
+      ],
+      "maxAttempts": 5
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I could not understand. Goodbye."
+        }
+      ]
+    }
+  }
+}
