@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobScraperLambda", "JobScraperLambda\JobScraperLambda.csproj", "{0B7B02EF-3DF8-4ABD-B697-814D5E7CAF8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobScraperLambda.Tests", "JobScraperLambda.Tests\JobScraperLambda.Tests.csproj", "{6908BACD-8CA0-4A18-8785-41B6B5638F2E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LexJobBotLambda", "LexJobBotLambda\LexJobBotLambda.csproj", "{7C02588F-2344-488B-A3A6-26EC638A9731}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LexJobBotLambda.Tests", "LexJobBotLambda.Tests\LexJobBotLambda.Tests.csproj", "{261FA67A-1086-4D24-A317-4C8787B36F98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3DBD9FFE-DEF7-4A6E-8344-CD68D54FC160}"
+	ProjectSection(SolutionItems) = preProject
+		DenverTechJobsBotWeb.html = DenverTechJobsBotWeb.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B7B02EF-3DF8-4ABD-B697-814D5E7CAF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B7B02EF-3DF8-4ABD-B697-814D5E7CAF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B7B02EF-3DF8-4ABD-B697-814D5E7CAF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B7B02EF-3DF8-4ABD-B697-814D5E7CAF8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6908BACD-8CA0-4A18-8785-41B6B5638F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6908BACD-8CA0-4A18-8785-41B6B5638F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6908BACD-8CA0-4A18-8785-41B6B5638F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6908BACD-8CA0-4A18-8785-41B6B5638F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C02588F-2344-488B-A3A6-26EC638A9731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C02588F-2344-488B-A3A6-26EC638A9731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C02588F-2344-488B-A3A6-26EC638A9731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C02588F-2344-488B-A3A6-26EC638A9731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261FA67A-1086-4D24-A317-4C8787B36F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261FA67A-1086-4D24-A317-4C8787B36F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261FA67A-1086-4D24-A317-4C8787B36F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261FA67A-1086-4D24-A317-4C8787B36F98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D186A99-6AF8-4875-8D70-7600D77CB1C6}
+	EndGlobalSection
+EndGlobal

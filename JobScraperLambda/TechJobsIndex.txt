@@ -1,0 +1,65 @@
+﻿
+{
+	"name": "denvertechjobs",
+	"fields": [{
+		"name": "id",
+		"type": "Edm.String",
+		"key": true,
+		"searchable": false
+	}, {
+		"name": "jobTitle",
+		"type": "Edm.String"
+	}, {
+		"name": "postedDate",
+		"type": "Edm.DateTimeOffset"
+	}, {
+		"name": "locationText",
+		"type": "Edm.String"
+	}, {
+		"name": "description",
+		"type": "Edm.String"
+	}, {
+		"name": "employerName",
+		"type": "Edm.String"
+	}, {
+		"name": "jobUrl",
+		"type": "Edm.String"
+	}, {
+		"name": "skills",
+		"type": "Collection(Edm.String)"
+	}, {
+		"name": "jobAttributes",
+		"type": "Collection(Edm.String)"
+	}, {
+		"name": "keyPhrases",
+		"type": "Collection(Edm.String)"
+	}, {
+		"name": "locationPoint",
+		"type": "Edm.GeographyPoint"
+	}],
+    "scoringProfiles": [
+        
+		{ "name": "geo",
+			  "text": {
+                "weights": {
+                    "jobTitle": 1.5,
+                    "description": 5,
+                    "skills": 5,
+					"employerName": 2,
+					"keyPhrases": 5
+                }
+            },
+		   "functions": [
+			  {
+				 "type": "distance",
+				 "boost": 10,
+				 "fieldName": "locationPoint",
+				 "interpolation": "logarithmic",
+				 "distance": {
+					"referencePointParameter": "currentLocation",
+					"boostingDistance": 50 }
+				 }
+		   ]
+		 }
+      ]
+}

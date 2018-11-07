@@ -1,0 +1,26 @@
+﻿{
+  "messageVersion": "1.0",
+  "invocationSource": "DialogCodeHook",
+  "userId": "",
+  "sessionAttributes": {
+    "lastConfirmedReservation": "{\"ReservationType\":\"Car\",\"PickUpCity\":\"seattle\",\"PickUpDate\":\"2017-05-01\",\"ReturnDate\":\"2017-05-05\",\"CarType\":\"midsize\",\"DriverAge\":\"33\"}",
+    "currentReservation": "{\"ReservationType\":\"Car\",\"PickUpCity\":\"seattle\",\"PickUpDate\":\"2017-04-26\",\"ReturnDate\":\"2017-04-28\"}"
+  },
+  "bot": {
+    "name": "TechJobsFinder",
+    "alias": null,
+    "version": "$LATEST"
+  },
+  "outputDialogMode": "Text",
+  "currentIntent": {
+    "name": "FindJob",
+    "slots": {
+      "​Location": "boulder co",
+      "​Profession": "software developer",
+      "Skills": "c#,sql,.net,solr,aws,azure,mvc,angular",
+      "PefectJob": "My perfect job would to be part of a high colaborative team working on cutting edge software that use my skill and enhance my skill set. Angular front end running on .netcore backend using a robust recomendation engine to supply data. I want permanent job no contracting, benefits woudl include medical plan and paid time off with a relaxed work environment including \"work from home\" days."
+    },
+    "confirmationStatus": "None"
+  },
+  "inputTranscript": "12"
+}
